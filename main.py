@@ -335,18 +335,10 @@ def socreboard (instructions):
                     #             stall = 1
                     # if stall == 0:
                     write_back(i, clock, instructions, instructions_status, component_status, register_status)
-
-
-
-
         print("cycle:",end='')
         print(clock)
         clock += 1
         # instructions_status[len(instructions)-1][3] = 1
-
-
-
-
         table1 = instructions_status
         table2 = component_status
         table3 = register_status
@@ -393,34 +385,6 @@ if __name__ == "__main__":
     for i in range(n):
         ins[i] = input().split(" ")
     socreboard(ins)
-    # print("指令状态表")
-    # print("instruction                    issue     read     execution     write")
-    # j = 1
-    # for j in range(n):
-    #     print(ins[j][0]+'  '+ins[j][1]+'  '+ins[j][2] + '  ' + ins[j][3])
-    #     # print(table1[j])
-    #
-    # print("功能部件状态表")
-    # print("部件名称     ","busy     ","op     ","Fi     ","Fj     ",'Fk     ','Qj     ','Qk     ','Rj     ','Rk     ')
-    # # print(table2)
-    # # 遍历每个子列表
-    # # 遍历每个子列表
-    # # 遍历每个子列表
-    # for sublist in table2:
-    #     for item in sublist:
-    #         for all in item:
-    #             print(all)
-    #             print()
-    # print("寄存器状态表")
-    # # for dict in table3:
-    # #     print(dict.keys())
-    # #     print(dict.values())
-    # for key in table3.keys():
-    #     print(key,end=' ')
-    # print()
-    # # 遍历值
-    # for value in table3.values():
-    #     print(value,end=' ')
 
 
 
